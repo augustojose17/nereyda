@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Cake Shalom</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: space-between;
+        }
+        .product {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 20px);
+            margin: 10px 0; 
+        }
+        .img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product button {
+            background-color: deeppink;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: darkmagenta;
+        }
+        #cart {
+            padding: 20px;
+        }
+       
+        @media (max-width: 1200px) {
+            .product {
+                width: calc(33.33% - 20px); 
+            }
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 10px); 
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                width: calc(100% - 20px); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="titulo">
+            <center>
+                <h1>¡Bienvenido a mi pastelería!</h1>
+            </center>
+        </div>
+    </div>
+
+    <div style="background-color:deeppink; height: 100px; display: flex; justify-content: center; align-items: center;">
+        <img src="nere fondo.png" width="100" height="100" alt=""/>
+        <h2 style="color: white;">Pastelería Shalom</h2> 
+	</div>
+	
+		<div id="cart">
+	    <img src="carrito-removebg-preview.png" width="90" height="100" alt=""/>
+        <h2>Carrito</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+</div>
+    <div class="container">
+        <div class="product">
+            <h2>Noche estrellada Pastel</h2>
+            <p>Precio: $10</p>
+            <div class="img-container">
+            <img src="LA NOCHE.jpeg" width="700" height="1244" alt="La noche "/> </div>
+            <button class="add-to-cart" data-name="Pastel Van Gogh" data-price="10">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Pastel de Rosa</h2>
+            <p>Precio: $35</p>
+            <div class="img-container">
+            <img src="Imagen de WhatsApp 2024-06-02 a las 21.14.54_12979b5b.jpg" width="1080" height="1080" alt="pastel Rosa"/> </div>
+            <button class="add-to-cart" data-name="Pastel Rosa" data-price="20">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Pasteles</h2>
+            <p>Precio: $20</p>
+            <div class="img-container">
+            <img src="Imagen de WhatsApp 2024-06-02 a las 21.14.54_f44c7053.jpg" width="1080" height="1080" alt=""/> </div>
+            <button class="add-to-cart" data-name="Pasteles" data-price="20">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Pastel Stich</h2>
+            <p>Precio: $20</p>
+            <div class="img-container">
+            <img src="Imagen de WhatsApp 2024-06-02 a las 21.16.30_cefacc65.jpg" width="1080" height="1080" alt="Pastel"/> </div>
+            <button class="add-to-cart" data-name="Pastel Stich" data-price="20">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Pastel Azul</h2>
+            <p>Precio: $20</p>
+            <div class="img-container">
+            <img src="Imagen de WhatsApp 2024-06-02 a las 21.14.54_f44c7053.jpg" width="1080" height="1080" alt=""/> </div>
+            <button class="add-to-cart" data-name="Pastel Azul" data-price="20">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Pastel de mariposas</h2>
+            <p>Precio: $20</p>
+            <div class="img-container">
+            <img src="fccb4cdca1bae937bcec1ee8a1c448d6.jpg" width="236" height="354" alt=""/> </div>
+            <button class="add-to-cart" data-name="Pastel Mariposa" data-price="20">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Cake</h2>
+            <p>Precio: $20</p>
+            <div class="img-container">
+            <img src="Imagen de WhatsApp 2024-06-02 a las 21.14.55_e1eade1f.jpg" width="1080" height="1080" alt=""/> </div>
+            <button class="add-to-cart" data-name="Cake" data-price="20">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <h2>Cake mini</h2>
+            <p>Precio: $20</p>
+            <div class="img-container">
+            <img src="Imagen de WhatsApp 2024-06-02 a las 21.16.30_a6880088.jpg" width="1080" height="1080" alt=""/> </div>
+            <button class="add-to-cart" data-name="Cake mini" data-price="20">Añadir al Carrito</button>
+        </div>
+    </div>
+
+    
+
+<script>
+        let carrito = [];
+        let total = 0;
+
+        function agregarAlCarrito(producto, precio) {
+            carrito.push({ producto, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function eliminarDelCarrito(index) {
+            const productoEliminado = carrito.splice(index, 1)[0];
+            total -= productoEliminado.precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById('cart-items');
+            const totalElemento = document.getElementById('total');
+
+            listaCarrito.innerHTML = '';
+            carrito.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.producto} - $${item.precio}`;
+                const eliminarBtn = document.createElement('button');
+                eliminarBtn.textContent = 'Eliminar';
+                eliminarBtn.onclick = () => eliminarDelCarrito(index);
+                li.appendChild(eliminarBtn);
+                listaCarrito.appendChild(li);
+            });
+
+            totalElemento.textContent = total;
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-name');
+                const price = parseFloat(button.getAttribute('data-price'));
+                agregarAlCarrito(name, price);
+            });
+        });
+    </script>
+</body>
+</html>
